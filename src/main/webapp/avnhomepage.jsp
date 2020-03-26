@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>avnhomepagevidhu</title>
+<title>avnhomepage</title>
 <style>
 body{
 background-color: #f9f8f7;
@@ -68,7 +68,7 @@ color:white;
 <div class="text-center">
    <span id="fullyear">2017</span>
    &#169; DEVOPS UNION. All Rights Reserved.<br>
-   | India | Singapore | Belgium | USA |
+   | India | Singapore | Belgium | USA | Japan | Agra
   </div>
   </form>
 </body>
