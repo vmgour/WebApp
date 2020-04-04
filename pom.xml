@@ -10,9 +10,13 @@
 	<properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>java</sonar.language>
+
 <sonar.login>admin</sonar.login>
     <sonar.password>admin</sonar.password>
   </properties>
+			dependencies {
+classpath "org.sonarsource.scanner.gradle: sonarqube-gradle-plugin:2.5"
+}
 	
 	<dependencies>
 		<dependency>
