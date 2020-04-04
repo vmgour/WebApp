@@ -7,11 +7,20 @@ node {
     def buildInfo
     
  rtMaven.tool = "maven"
-
-    stage('Clone sources') {
+	
+	    stage('Clone sources') {
         git url: 'https://github.com/vmgour/WebApp.git'
     }
 
+	try {
+	stage("Building SONAR ...") {
+	sh './gradlew clean sonarqube'
+		}
+		} catch (e) {emailext attachLog: true, body: 'See attached log', subject: 'BUSINESS Build Failure', to: 'vmgour@gmail.com'
+	step([$class: 'WsCleanup'])
+	return
+		}
+	
     stage('Artifactory configuration') {
         // Tool name from Jenkins configuration
         rtMaven.tool = "maven"
